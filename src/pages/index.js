@@ -2,6 +2,22 @@ import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import PostCard from "./components/PostCard";
+import SectionHeading from "./components/SectionHeading";
+
+export default function Home({ posts }) {
+  return (
+    <>
+      <SectionHeading />
+      <div className="">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {posts.map((post) => (
+            <PostCard key={post.slug} post={post} />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
 
 export const getStaticProps = () => {
   const files = fs.readdirSync("posts");
@@ -20,15 +36,3 @@ export const getStaticProps = () => {
     },
   };
 };
-
-export default function Home({ posts }) {
-  return (
-    <div className="my-8">
-      <div className="grid grid-cols-3 gap-4">
-        {posts.map((post) => (
-          <PostCard key={post.slug} post={post}></PostCard>
-        ))}
-      </div>
-    </div>
-  );
-}

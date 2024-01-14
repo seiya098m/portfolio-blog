@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,7 +14,23 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "bg-color": "#fff",
+        secondary: "#ffed4a",
+        link: "#fff",
+        "hover-link": "#f7f9f9",
+        "font-color": "#5D5D63",
+      },
+      fontFamily: {
+        sans: ["var(--font-noto-sans-jp)", ...defaultTheme.fontFamily.sans],
+      },
+      fontWeight: {
+        normal: "500",
+      },
+      letterSpacing: {
+        normal: "0.04em",
+      },
     },
+    plugins: [require("@tailwindcss/typography")],
   },
-  plugins: [require("@tailwindcss/typography")],
 };

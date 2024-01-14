@@ -24,15 +24,13 @@ export async function getStaticPaths() {
 
 const Post = ({ frontMatter, content }) => {
   return (
-    <div className="prose prose-lg max-w-none">
-      <div className="border">
-        <Image
+    <div className="prose prose-lg">
+      {/* <Image
           src={`/${frontMatter.image}`}
           width={1000}
           height={700}
           alt={frontMatter.title}
-        />
-      </div>
+        /> */}
       <h1 className="mt-12">{frontMatter.title}</h1>
       <span>{frontMatter.date}</span>
       <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
