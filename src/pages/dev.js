@@ -1,10 +1,10 @@
-import SectionHeading from "../components/SectionHeading";
+import SectionHeading from "../components/Sections/SectionHeading";
 
 function dev() {
   return (
     <>
       <SectionHeading />
-      <div className="border">
+      <div className="h-screen border">
         こんにちはdev
         <br />
         Next.js を使って Markdown のブログサイトの構築を一から行なっていきます。
