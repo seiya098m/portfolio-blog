@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Logo({ height }) {
+const Logo = ({ height }) => {
   return (
     <>
       <Link href="/" className="flex items-center">
@@ -20,6 +20,6 @@ function Logo({ height }) {
       </Link>
     </>
   );
-}
+};
 
 export default Logo;

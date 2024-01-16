@@ -18,7 +18,7 @@ module.exports = {
         "bg-color": "#fff",
         secondary: "#ffed4a",
         link: "#fff",
-        "hover-link": "#f7f9f9",
+        "hover-link": "#f2f2f2",
         "font-color": "#5D5D63",
       },
       fontFamily: {
@@ -31,6 +31,6 @@ module.exports = {
         normal: "0.04em",
       },
     },
-    plugins: [require("@tailwindcss/typography")],
   },
+  plugins: [require("@tailwindcss/typography")],
 };

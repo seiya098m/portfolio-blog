@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 export const navigation = [
   { name: "HOME", href: "/" },
@@ -7,7 +6,7 @@ export const navigation = [
   { name: "DEV", href: "/dev" },
 ];
 
-function MainMenu() {
+const MainMenu = () => {
   return (
     <nav>
       <ul className="flex gap-x-6">
@@ -15,7 +14,7 @@ function MainMenu() {
           <li key={index} className="  ">
             <Link
               href={item.href}
-              className="bg-link hover:bg-hover-link rounded-xl border-2 p-2 text-sm font-semibold shadow-md duration-200 active:shadow-none"
+              className="rounded-xl border-2 bg-link p-3 text-sm font-semibold drop-shadow-2xl  duration-200 hover:bg-hover-link active:shadow-none"
             >
               {item.name}
             </Link>
@@ -24,6 +23,6 @@ function MainMenu() {
       </ul>
     </nav>
   );
-}
+};
 
 export default MainMenu;

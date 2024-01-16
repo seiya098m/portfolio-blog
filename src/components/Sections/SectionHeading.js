@@ -1,9 +1,13 @@
-export default function SectionHeading() {
+const SectionHeading = ({ heading }) => {
   return (
     <>
-      <h3 className="mx-auto max-w-6xl  text-lg font-semibold">
-        ブログ記事一覧
-      </h3>
+      <div className="py-6">
+        <h1 className="border-b px-4 py-2 text-2xl font-bold shadow-black drop-shadow-lg">
+          {heading}
+        </h1>
+      </div>
     </>
   );
-}
+};
+
+export default SectionHeading;

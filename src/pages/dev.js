@@ -1,9 +1,9 @@
 import SectionHeading from "../components/Sections/SectionHeading";
 
-function dev() {
+const dev = () => {
   return (
     <>
-      <SectionHeading />
+      <SectionHeading heading="Product" />
       <div className="h-screen border">
         こんにちはdev
         <br />
@@ -16,6 +16,6 @@ function dev() {
       </div>
     </>
   );
-}
+};
 
 export default dev;

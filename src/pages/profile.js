@@ -1,12 +1,11 @@
 import SectionHeading from "../components/Sections/SectionHeading";
 
-function profile() {
+const profile = () => {
   return (
     <>
-      <SectionHeading />
-      <div>profile</div>
+      <SectionHeading heading="Profile" />
     </>
   );
-}
+};
 
 export default profile;
