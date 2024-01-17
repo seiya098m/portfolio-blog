@@ -17,9 +17,15 @@ export const getStaticProps = () => {
       slug,
     };
   });
+
+  const sortedPosts = posts.sort((postA, postB) =>
+    new Date(postA.frontMatter.date) > new Date(postB.frontMatter.date)
+      ? -1
+      : 1,
+  );
   return {
     props: {
-      posts,
+      posts: sortedPosts,
     },
   };
 };
@@ -30,7 +36,7 @@ export default function Home({ posts }) {
       <div className="mb-5">
         <SectionHeading heading="Blog List" />
       </div>
-      <div className="mx-auto max-w-5xl p-5">
+      <div className="mx-auto max-w-5xl px-6">
         <PostCardList posts={posts} />
       </div>
     </>

@@ -4,7 +4,6 @@ import { useState } from "react";
 import Logo from "../Icons/Logo";
 import { navigation } from "./MainMenu";
 
-
 const HamburgerMenu = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -26,11 +25,13 @@ const HamburgerMenu = () => {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white py-6 pr-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="" className="">
               <span className="sr-only">Your Company</span>
-              <Logo height="h-16" />
+              <div className="-p-6 h-16 w-16">
+                <Logo />
+              </div>
             </a>
             <button
               type="button"
@@ -43,7 +44,7 @@ const HamburgerMenu = () => {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
+              <div className="space-y-2 p-6">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
@@ -54,13 +55,12 @@ const HamburgerMenu = () => {
                   </a>
                 ))}
               </div>
-            
             </div>
           </div>
         </Dialog.Panel>
       </Dialog>
     </>
   );
-}
+};
 
 export default HamburgerMenu;

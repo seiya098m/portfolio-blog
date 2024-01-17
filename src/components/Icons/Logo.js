@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
+import autoprefixer from "autoprefixer";
 
-const Logo = ({ height }) => {
+const Logo = () => {
   return (
     <>
       <Link href="/" className="flex items-center">
@@ -11,11 +13,13 @@ const Logo = ({ height }) => {
               alt=""
             /> */}
         {/* <h1 className="text-font-color text-2xl font-bold">SAMPLE</h1> */}
-        <img src="images/logo-o.png" alt="logo" className={`${height}`} />
-        <img
-          src="images/logo-s-removebg-preview.png"
+        <Image src="/images/logo-o.png" width={100} height={100} alt="logo" />
+        <Image
+          src="/images/logo-s-removebg-preview.png"
+          width={100}
+          height={100}
           alt="logo"
-          className={`${height} -ml-5 w-auto`}
+          className="-ml-5"
         />
       </Link>
     </>

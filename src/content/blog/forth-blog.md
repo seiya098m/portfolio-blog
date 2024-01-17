@@ -1,6 +1,6 @@
 ---
 title: "スライドを効率的に作る方法を考えてみた"
-date: "2022-07-13"
+date: "2024-01-14"
 description: "Next.jsでmarkdownファイルを利用したブログの構築手順を解説しています。"
 image: next-js-blog1.jpg
 ---
