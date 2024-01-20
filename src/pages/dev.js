@@ -1,9 +1,21 @@
+import { NextSeo } from "next-seo";
 import SectionHeading from "../components/Sections/SectionHeading";
 
-const dev = () => {
+const dev = (params) => {
+  const title = "Dev";
+
   return (
     <>
-      <SectionHeading heading="Product" />
+      <NextSeo
+        title={title}
+        openGraph={{
+          type: "website",
+          url: `http:localhost:3000/dev`,
+          title: title,
+          images: [],
+        }}
+      />
+      <SectionHeading heading={title} />
       <div className="h-screen border">
         こんにちはdev
         <br />
