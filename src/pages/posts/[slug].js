@@ -1,5 +1,4 @@
 import SEO from "@/components/SEO/SEO";
-import SectionHeading from "@/components/Sections/SectionHeading";
 import { client } from "@/libs/client";
 import { formatDateWithHyphen } from "@/utils/formatDate";
 
@@ -15,8 +14,20 @@ const Post = ({ post }) => {
       <SEO post={post} />
       <div className="mt-20 flex justify-center  px-3">
         <article className="prose prose-sm min-w-80 md:prose lg:prose-lg prose-h1:mb-10 prose-h2:mb-10 prose-h3:mt-16 prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-img:rounded-lg ">
+          {/* タイトル */}
           <h1 className="">{post.title}</h1>
+          {/* 投稿日時 */}
           <span className="">{formatDateWithHyphen(post.publishedAt)}</span>
+          {/* タグ */}
+          <div>
+            {post.tags.length > 0 &&
+              post.tags.map((tag) => (
+                <span key={tag.id} className="mr-2">
+                  <a href={`/tags/${tag.id}`}>{tag.name}</a>
+                </span>
+              ))}
+          </div>
+          {/* 本文 */}
           <div
             dangerouslySetInnerHTML={{
               __html: `${post.body}`,

@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export const navigation = [
   { name: "HOME", href: "/" },
+  { name: "TAGS", href: "/tags" },
   { name: "PROFILE", href: "/profile" },
   { name: "DEV", href: "/dev" },
 ];

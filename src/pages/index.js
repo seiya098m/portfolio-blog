@@ -6,7 +6,7 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="mb-5">
-        <SectionHeading heading="Blog List" />
+        <SectionHeading heading="ブログ一覧" />
       </div>
       <div className="mx-auto max-w-5xl px-6">
         <PostCardList posts={posts} />
