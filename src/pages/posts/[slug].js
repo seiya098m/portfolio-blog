@@ -1,6 +1,7 @@
 import SEO from "@/components/SEO/SEO";
 import { client } from "@/libs/client";
 import { formatDateWithHyphen } from "@/utils/formatDate";
+import Link from "next/link";
 
 // export async function getStaticProps({ params }) {
 //   const file = fs.readFileSync(`src/content/blog/${params.slug}.md`, "utf-8");
@@ -23,7 +24,7 @@ const Post = ({ post }) => {
             {post.tags.length > 0 &&
               post.tags.map((tag) => (
                 <span key={tag.id} className="mr-2">
-                  <a href={`/tags/${tag.id}`}>{tag.name}</a>
+                  <Link href={`/tags/${tag.id}`}>{tag.name}</Link>
                 </span>
               ))}
           </div>
