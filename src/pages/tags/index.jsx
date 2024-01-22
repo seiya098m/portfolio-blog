@@ -6,7 +6,7 @@ export default function Home({ tags }) {
   return (
     <>
       <div className="mb-5">
-        <SectionHeading heading="タグ一覧" />
+        <SectionHeading heading="タグ" />
       </div>
       <div className="mx-auto max-w-5xl px-6">
         <TagList tags={tags} />

@@ -1,9 +1,9 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Dialog } from "@headlessui/react";
 import { useState } from "react";
-import Logo from "../Icons/Logo";
-import { navigation } from "./MainMenu";
 import Link from "next/link";
+import Logo from "@/components/Icons/Logo";
+import { navigation } from "@/components/Sections/MainMenu";
 
 const HamburgerMenu = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

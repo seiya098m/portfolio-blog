@@ -1,7 +1,7 @@
-import Logo from "../Icons/Logo";
-import HamburgerMenu from "../Sections/HamburgerMenu";
-import MainMenu from "../Sections/MainMenu";
-import SectionHeading from "../Sections/SectionHeading";
+import Logo from "@/components/Icons/Logo";
+import HamburgerMenu from "@/components/Sections/HamburgerMenu";
+import MainMenu from "@/components/Sections/MainMenu";
+import SectionHeading from "@/components/Sections/SectionHeading";
 
 const Header = () => {
   return (

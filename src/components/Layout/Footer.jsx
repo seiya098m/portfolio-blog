@@ -1,5 +1,6 @@
-import GithubLink from "../Icons/GithubLink";
+import GithubLink from "@/components/Icons/GithubLink";
 
+GithubLink;
 const Footer = () => {
   return (
     <footer className="">

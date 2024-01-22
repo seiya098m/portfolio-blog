@@ -1,5 +1,6 @@
-import PostCard from "../UI/PostCard";
+import PostCard from "@/components/UI/PostCard";
 
+PostCard;
 const PostCardList = ({ posts }) => {
   return (
     <>
