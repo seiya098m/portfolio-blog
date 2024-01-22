@@ -1,6 +1,7 @@
 import SectionHeading from "../components/Sections/SectionHeading";
 import PostCardList from "../components/Sections/PostCardList";
 import { client } from "@/libs/client";
+import TagList from "@/components/Sections/TagList";
 
 export default function Home({ posts }) {
   return (

@@ -8,7 +8,7 @@ export default function Home({ tags }) {
       <div className="mb-5">
         <SectionHeading heading="タグ一覧" />
       </div>
-      <div>
+      <div className="mx-auto max-w-5xl px-6">
         <TagList tags={tags} />
       </div>
     </>

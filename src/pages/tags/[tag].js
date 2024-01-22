@@ -3,6 +3,18 @@ import PostCardList from "@/components/Sections/PostCardList";
 import { client } from "@/libs/client";
 
 const Tag = ({ posts }) => {
+  if (posts.length === 0) {
+    return (
+      <>
+        <div className="mb-5">
+          <SectionHeading heading="Blog List" />
+        </div>
+        <div className="mx-auto max-w-5xl px-6">
+          ブログコンテンツがありません
+        </div>
+      </>
+    );
+  }
   return (
     <>
       <div className="mb-5">

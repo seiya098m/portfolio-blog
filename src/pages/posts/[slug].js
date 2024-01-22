@@ -28,6 +28,8 @@ const Post = ({ post }) => {
                 </span>
               ))}
           </div>
+          {/* 目次 */}
+          <div className="text-center">----- 目次 ------</div>
           {/* 本文 */}
           <div
             dangerouslySetInnerHTML={{
