@@ -10,15 +10,16 @@ const HamburgerMenu = () => {
 
   return (
     <>
-      <button
-        type="button"
-        className=" rounded-md border p-2.5"
-        onClick={() => setMobileMenuOpen(true)}
-      >
-        <span className="sr-only">Open main menu</span>
-        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-      </button>
-
+      <div className="flex items-center pr-2">
+        <button
+          type="button"
+          className=" rounded-md p-2.5"
+          onClick={() => setMobileMenuOpen(true)}
+        >
+          <span className="sr-only">Open main menu</span>
+          <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+        </button>
+      </div>
       <Dialog
         as="div"
         className="lg:hidden"

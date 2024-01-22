@@ -1,8 +1,6 @@
 import Link from "next/link";
 
-Link;
-
-export default function Example() {
+export default function custom404() {
   return (
     <>
       {/*

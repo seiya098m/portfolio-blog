@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="">
       <div className="container mx-auto flex h-20 flex-col items-center justify-around">
-        <div>
+        <div className=" text-gray-500">
           <GithubLink />
         </div>
         <div className="mt-16">

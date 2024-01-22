@@ -3,7 +3,7 @@ const GithubLink = () => {
     <>
       <a href="https://github.com/seiya098m" target="_blank">
         <svg
-          className="h-[25px] w-[25px] text-gray-600"
+          className="h-[25px] w-[25px]"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
